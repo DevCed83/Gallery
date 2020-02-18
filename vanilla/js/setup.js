@@ -11,7 +11,7 @@ function the_header(){
 
 function header_content(){
     let header_nav, nav_anchor; 
-    let route_list = ['/site_vitrine/index.html', '/site_vitrine/presentation.html', '/site_vitrine/form.html', '/site_vitrine/news.html', '/site_vitrine/duplex.html'];
+    let route_list = ['/index.html', '/presentation.html', '/form.html', '/news.html', '/duplex.html'];
     let text_list = ['Accueil', "l'Équipe", "L'Inscription", "les News", "l'Instantané"]
     header_nav = document.querySelector('header>nav')
     for (let i = 0; i<route_list.length; i++){
