@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Formulaire</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+
+<body>
+    <main>
+        <article>
+            <section>
+                <h1>Formulaire d'inscription</h1>
+                <a href="index.html" id="aide">Aide pour remplir le formulaire</a>
+            </section>
+            <form id="registre" action="traitement.php" method="get">
+                <fieldset name >
+                    <legend>Infos persos</legend>
+                    <label for="prenom">Prénom :</label>
+                    <input type="text" id="prenom" name="prenom" required>
+
+                    <label for="naiss">Date de naissance :</label>
+                    <input type="date" id="naiss" name="naiss">
+                    <output id="age"></output>
+                    <label for="mail">Courriel :</label>
+                    <input type="email" id="mail" name="mail">
+                    <label for="pays">Pays :</label>
+                    <select name="pays" id="pays">
+                        <option value="TU">Tunisie</option>
+                        <option value="FR" selected>France</option>
+                        <option value="MG">Madagascar</option>
+                        <option value="CI">Côte d'Ivoire</option>
+                        <option value="IN">Inde</option>
+                    </select>
+                    <label for="cp">Code postal :</label>
+                    <input type="text" id="cp" name="cp">
+                    <output id="ville"></output>
+                    </div>
+                </fieldset>
+                    <fieldset>
+                    <legend>Genre</legend>
+                    <div>
+                        <label for="feminin">Féminin :</label>
+                        <input type="radio" id="feminin" name="genre" value="F" checked>
+                    </div>
+                    <div>
+                        <label for="masculin">Masculin :</label>
+                        <input type="radio" id="masculin" name="genre" value="M">
+                    </div>
+                    <div>
+                        <label for="autre">Autre :</label>
+                        <input type="radio" id="autre" name="genre" value="X">
+                    </div>
+                </fieldset>
+                <fieldset>
+                    <legend>Hobbies</legend>
+                    <div>
+                        <label for="sport">Sport :</label>
+                        <input type="checkbox" id="sport" name="hobbies[]" value="sport">
+                    </div>
+                    <div>
+                        <label for="cinema">Cinéma :</label>
+                        <input type="checkbox" id="cinema" name="hobbies[]" value="cinema">
+                    </div>
+                    <div>
+                        <label for="lecture">Lecture :</label>
+                        <input type="checkbox" id="lecture" name="hobbies[]" value="lecture">
+                    </div>
+                    <div>
+                        <label for="cuisine">Cuisine :</label>
+                        <input type="checkbox" id="cuisine" name="hobbies[]" value="cuisine">
+                    </div>
+                    <div>
+                        <label for="tous">Tous/Aucun :</label>
+                        <input type="checkbox" id="tous">
+                    </div>
+                </fieldset>
+                <div>
+                    <input type="submit" value="Enregistrer sur le serveur">
+                    <input type="button" value="Cookies" id="cookie">
+                    <input type="button" value="Web Storage" id="ws">
+                    <input type="button" value="Indexed DB" id="idb">
+                    <input type="button" value="Delete Cookies" id="delcoo">
+                </div>
+            </form>
+        </article>
+    </main>
+    <script type="text/javascript" src="js/setup.js"></script>
+    <script type="text/javascript" src="js/utils.js"></script>
+    <script type="text/javascript" src="js/form.js"></script>
+    <!-- <script src="js/form.js"></script> -->
+</body>
+
+</html>
