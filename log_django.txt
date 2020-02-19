@@ -80,8 +80,20 @@ présentation des fichiers générés:
 
 Inclure une app à son projet : 
 	settings.py : ajouter la chaine de caractère du nom de l'app dans la constante INSTALLED_APPS.
+	Faire la migration de base de données
+	urls.py : ajouter un appel de path vers l'url concerné qui inclut les urls de l'app 
 
 Ajouter une nouvelle page : 
 	préciser la correspondance url/vue
 	modéliser les données
 	definir la vue et le template de rendu
+
+Ajouter un model : 
+	décrire une classe du model concerné, qui hérite de Model du module models
+	cette classe ne possède pas d'attribut d'instance, uniquement des attributs de classe. Ces attributs sont des objets qui représente le champs de saisies utilisé pour donner une valeur à cet attributs. 
+
+	executer les commandes suivantes :
+		python manage.py migrate
+		python manage.py makemigrations <nom de l'app>
+		python manage.py sqlmigrate <nom de l'app> <version de la derniere migration>
+		python manage.py migrate

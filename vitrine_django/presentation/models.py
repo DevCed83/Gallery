@@ -6,13 +6,9 @@ from django.db import models
 
 # Create your models here.
 class Collaborator(models.Model):
-	"""docstring for Collaborator"""
-	def __init__(self):
-		super(Collaborator, self).__init__()
-		self.details = []
-		self.experiences = []
-		self.educations = []
-		self.skills = []
+	first_name = models.CharField(max_length = 70)
+	last_name = models.CharField(max_length = 70)
+	
 
 class Detail(models.Model):
 	"""docstring for Details"""
@@ -51,3 +47,10 @@ class Skill(models.Model):
 		self.name = ""
 		self.level = 0 # out of 5
 
+class SocialNetwork(object):
+	"""docstring for SocialNetwork"""
+	def __init__(self):
+		super(SocialNetwork, self).__init__()
+		self.name = ""
+		self.url = ""
+		
