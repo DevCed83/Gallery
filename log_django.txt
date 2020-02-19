@@ -4,9 +4,19 @@ https://www.youtube.com/watch?v=e1IyzVyrLSU
 secondary source : https://developer.mozilla.org/en-US/docs/Learn/Server-side/Django/Introduction
 
 
+Django Overview
+
+User ---> requests a page ---> gets a page
+Browser ---> HTTP ---> Django ---> HTML
+HTTP Request ---> Django-Url ---> View ---> Model ---> View ---> HTTP Response
+														 A
+											Template-----|
+
+Django Project Url ---> Django App Url ---> Django
+
 ///////////////////////////////////////////////////////////////////
 ///////////                                             ///////////
-///////////				Creation d'un site				///////////		   
+///////////				Creation d'un site				///////////
 ///////////                                             ///////////
 ///////////////////////////////////////////////////////////////////
 
@@ -44,12 +54,11 @@ Lancer le serveur
 verifer dans le navigateur sur localhost (avec le port correspondant si nécessaire)
 
 
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-/////////////////////////Creation d'une app/////////////////////////////
-////////////////////////////////////////////////////////////////////////
-////////////////////////////////////////////////////////////////////////
-
+///////////////////////////////////////////////////////////////////
+///////////                                             ///////////
+///////////				Creation d'une app				///////////
+///////////                                             ///////////
+///////////////////////////////////////////////////////////////////
 
 dans le dossier racine du projet django (le site)
 créer une app 
@@ -58,7 +67,19 @@ créer une app
   	python manage.py startapp create_account
 
 présentation des fichiers générés: 
-	models.py : contient la représentation sous forme de classe python des concepts stockés dans la base de données. (ndlr : pour cqrs, stockage des structures de données command, event, state, query, reply ?) 
-
-
 	
+	urls.py : definit le patron de correspondance url/vue.
+
+	models.py : contient la représentation sous forme de classe python des entités stockées dans la base de données. (ndlr : pour cqrs, stockage des structures de données command, event, state, query, reply ?) 
+
+	views.py : fonctions (1 par page) nommé après le dernier élément de l'url signé avec la requete, qui renvoit un rendu de la requete avec un patron html
+	
+	reste à creuser
+
+Inclure une app à son projet : 
+	settings.py : ajouter la chaine de caractère du nom de l'app dans la constante INSTALLED_APPS.
+
+Ajouter une nouvelle page : 
+	préciser la correspondance url/vue
+	modéliser les données
+	definir la vue et le template de rendu
