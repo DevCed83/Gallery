@@ -70,7 +70,9 @@ présentation des fichiers générés:
 	
 	urls.py : definit le patron de correspondance url/vue.
 
-	models.py : contient la représentation sous forme de classe python des entités stockées dans la base de données. (ndlr : pour cqrs, stockage des structures de données command, event, state, query, reply ?) 
+	models.py : 
+	voir : https://docs.djangoproject.com/en/3.0/topics/db/models/
+	contient la représentation sous forme de classe python (descendante de models.Model)des entités stockées dans la base de données. (ndlr : pour cqrs, stockage des structures de données command, event, state, query, reply ?) On utilise des objet du module models de django 
 
 	views.py : fonctions (1 par page) nommé après le dernier élément de l'url signé avec la requete, qui renvoit un rendu de la requete avec un patron html
 	
