@@ -9,10 +9,13 @@ set up virtual environment
 install django
 initiate new project
 initiate new app 
+manage migrate
+manage createsuperuser (fill in the blanks)
+test : runserver, browse to localhost/admin/ and login to the dashboard.
+
 settings : add new app to installed apps
 			add new url to include app urlpatterns
 add [template, static] folder in app folder
-manage migrate
 
-test : runserver
+
 

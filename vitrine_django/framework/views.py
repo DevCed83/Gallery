@@ -2,11 +2,13 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def index(request):
-	return render(request, 'index.html')
+def fw_index(request):
+	context = {'mon_test':  'Salut gros !'}
+	return render(request, 'my_index.html', context)
 
-def presentation(request):
-	return render(request, 'presentation.html')
+def fw_presentation(request):
+	context = {'mon_test' : 'Salut gros !'}
+	return render(request, 'my_presentation.html', context)
 
 def news(request):
 	return render(request, 'news.html')

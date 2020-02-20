@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    #'presentation.apps.PresentationConfig',
+    'presentation.apps.PresentationConfig',
     'framework.apps.FrameworkConfig',
     ]
  
@@ -62,7 +62,9 @@ ROOT_URLCONF = 'vitrine_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [],
+        'DIRS': [os.path.join(BASE_DIR, 'framework/templates'),
+                 os.path.join(BASE_DIR, 'presentation/templates'), 
+                ],
         'APP_DIRS': True,
         'OPTIONS': {
             'context_processors': [
@@ -74,6 +76,8 @@ TEMPLATES = [
         },
     },
 ]
+
+print (TEMPLATES[0]['DIRS'])
 
 WSGI_APPLICATION = 'vitrine_django.wsgi.application'
 
