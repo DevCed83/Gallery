@@ -88,7 +88,7 @@ Ajouter une nouvelle page :
 	modéliser les données
 	definir la vue et le template de rendu
 
-Ajouter un model : 
+Ajouter un model dans la base de données: 
 	décrire une classe du model concerné, qui hérite de Model du module models
 	cette classe ne possède pas d'attribut d'instance, uniquement des attributs de classe. Ces attributs sont des objets qui représente le champs de saisies utilisé pour donner une valeur à cet attributs. 
 

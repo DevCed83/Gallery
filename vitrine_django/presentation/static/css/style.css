@@ -1,0 +1,197 @@
+/*import url('https://fonts.googleapis.com/css?family=Lato');*/
+@media only screen and (max-width:600px){
+    body{background-color: red;}
+}
+body {
+    margin: 0px;
+    border: 0px;
+    padding: 0px;
+    height: 100%;
+    color: #2c3e50;
+    font-family: 'Lato', sans-serif;
+    font-size: 14px;
+}
+
+header{
+    /*margin : inherit;*/
+    position : fixed;
+    width: 100%;
+    top: 0;
+    background: #344658;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
+                0 3px 5px rgba(0, 0, 0, .2),
+                0 5px 10px rgba(0, 0, 0, .2),
+                0 20px 20px rgba(0, 0, 0, .15);
+    border-radius: 0 0 3px 3px ;  
+}
+
+nav{
+    /*font-size: 20px;*/
+    display: table;
+    border-radius: 0.5em;
+    margin: 0px auto;
+    padding: 0;
+    width: 65%;
+    text-align: center;
+}
+
+nav>a{
+    display: table-cell;
+    font-weight: bold;
+    color: rgba(255, 255, 255, .7); 
+    text-decoration: none;
+    /*max-height: 1.5em;*/
+    /*height : 100%;*/
+    padding: 0.7em 0.3em 0.7em;
+    text-shadow: 0 1px 0 rgba(0, 0, 0, .4);
+}
+
+/*de tout les lien de l'élément nav : je veux le premier 
+ */
+/*nav>a:first-child {
+    border :solid red;
+    border-radius: 3px 0 0 3px;
+}*/
+
+/*nav>a:last-child{
+    border : solid pink;
+    border-radius: 0 3px 3px 0;
+}*/
+
+nav>a:hover{
+    color: rgba(255, 255, 255, 0.925);
+    background: #1a242f; 
+}
+
+main{
+    padding-top: 5em;
+}
+
+article{
+    /*border: solid pink;*/
+    margin-top: 3em;
+
+}
+section, aside{
+    padding-top: 2em;
+    width: 65%;
+    border : solid white 2em;
+    /*max-width: 58em;*/
+    padding-right: 1.5em;
+    padding-left: 1.5em;
+    margin-right: auto;
+    margin-left: auto;
+}
+
+article>section, aside{
+    background-color: #ecf0f1;
+}
+
+figure{
+    float: left;
+    display: inline-block;
+    /*max-width: 100%;*/
+    height: 10.5em;
+    padding: 0.4em;
+    background-color: #fff;
+    border: 1px solid #ddd;
+    border-bottom : -5px solid white;
+    border-radius: 6px;
+    transition: all .2s ease-in-out;
+    margin-top: -100px;
+    margin-left: 0px;
+    margin-right: 20px;
+    margin-bottom: 0px;
+    /*margin-bottom: 0.6em solid white;*/
+    overflow:hidden;
+    z-index: 5;
+}
+h1{
+    margin-top: 10px;
+    margin-bottom: 10px;
+}
+
+h2{
+    margin-top: 8px;
+    margin-bottom: 8px;
+    text-decoration: underline;
+}
+
+h3{
+    border-bottom: 1px solid #E5E5E5;
+    margin-top: 4px;
+    margin-bottom: 4px;
+    padding-bottom: 3px;
+}
+
+h4{
+    margin:0;
+    margin-top:1em;
+}
+
+footer{
+    /*position: relative;*/
+    /*margin-top: auto;*/
+/*    padding: 25px 0px 4px;*/
+    font-size: .9em;
+    background-color: #f9f9f9;
+    border-top: 3px solid #ececec;
+    width : 100%;
+    bottom: 0;
+}
+
+footer>section{
+    /*display:block;*/
+    /*border : solid pink;*/
+    padding-top : 0;
+    border :0; /*reset from previous call*/
+}
+
+.footerdiv{
+    /*display: inline-block;*/
+    /*border : solid purple 5px;*/
+    width: 50%;
+    /*padding : 0 0 0 50;*/
+    vertical-align: middle;
+    height: 100%;
+    text-align: left;
+    float: left;
+    /*height : 100%;*/
+}
+
+
+/*reg ex check 
+https://www.w3schools.com/cssref/css_selectors.asp*/
+section>div a[href^="http"] {
+    display: inline-block;
+    width: 50px;
+    height: 50px;
+    margin: 0 10px;
+    background: url(../images/boutons-sociaux.png) 0 0;
+    border-radius: 5px;
+    transition-property:border-radius;
+    transition-duration:900ms;
+}
+
+footer>section a[href^="http"]:nth-child(1) {
+    background-position: 0px 0;
+}
+
+footer>section a[href^="http"]:nth-child(2) {
+    background-position: -51px 0;   
+}
+
+footer>section a[href^="http"]:nth-child(3) {
+    background-position: -102px 0;
+}
+
+footer>section a:hover{
+    border-radius:30px;
+}
+footer>section a:first-child:hover{background-position:0 -51px;}
+footer>section a:nth-child(2):hover{background-position:-51px -51px;}
+footer>section a:nth-child(3):hover{background-position:-102px -51px;}
+
+footer p{
+    margin: 1em 0em;
+}

@@ -1,0 +1,2 @@
+semantic()
+duplex_intro()

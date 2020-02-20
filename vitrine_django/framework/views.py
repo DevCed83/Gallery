@@ -8,11 +8,11 @@ def index(request):
 def presentation(request):
 	return render(request, 'presentation.html')
 
-def form(request):
-	return render(request, 'form.html')
-
 def news(request):
 	return render(request, 'news.html')
 
-def duplex(request):	
+def form(request):
+	return render(request, 'form.html')
+
+def duplex(request):
 	return render(request, 'duplex.html')

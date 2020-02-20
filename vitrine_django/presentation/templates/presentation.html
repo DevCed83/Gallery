@@ -1,0 +1,146 @@
+{% load static %}
+
+<!DOCTYPE html>
+<html>
+	<head>
+	    <title>Cédric Montanuy, Concepteur développeur informatique</title>
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    <meta charset="utf-8" />
+	    <link rel="stylesheet" type="text/css" href="{% static 'css/style.css'%}">
+	    <link rel="icon" href="{% static 'images/favicon.ico'%}">
+	    <link rel="stylesheet" type="text/css" href="//fonts.googleapis.com/css?family=Lato">
+	</head>
+	<body>
+		<header>
+			<nav>
+				<a href="../" title="Accueil">&ltCM&gt</a>
+				<a href="#competences" title="Mes domaines de compétences">Compétence</a>
+				<a href="#experiences" title="Mes expériences professionnelles">Experience Pro</a>
+				<a href="#formation" title="Mon cursus">Formation</a>
+				<a href="#hobby" title="Mes centres d'intérêt">Centres d'interêt</a>
+			</nav> 
+		</header>
+		<main>
+			<article>
+				<section>
+					<figure>
+						<img src="{% static 'images\profil.jpg'%}" alt="portrait Cédric Montanuy">
+					</figure>
+					<h1>
+						Cédric&nbspMontanuy
+					</h1>
+					<h2>
+						Concepteur&nbspDéveloppeur
+					</h2>
+					<h3>
+						A propos de moi
+					</h3>
+					<p>
+						Après avoir acquis de solides compétences techniques en travaillant sur différents projets personnel pendant 2 ans (Python3, unittest, Django, API REST/websocket, TDD, Clean Code), j’ai approfondi mes connaissances en conception lors d’un cursus de Concepteur Développeur Informatique au GRETA (UML 2.5, MVC, CQRS) et enrichi mes compétences techniques (HTML, CSS, JS, Java, Junit). 
+					</p>
+				</section>
+				<section id="experiences">
+					<h2>
+						Experiences Professionnelles
+					</h2>
+					<p>
+				      <em>Octobre 2019 - Ce jour</em> <strong>Baobab Ingénierie</strong> - <em>Paris</em>
+				      <br/>Intervenant pédagogique auprès du GRETA
+				      <ul>
+				          <li><strong>Stack Web Vanilla (HTTP, HTML5, CSS3, JS)</strong></li>
+				          <li><strong>Python (algorithmique, POO, GUI) </strong></li>
+				          <li><strong>Clean Code</strong></li>
+				      </ul>
+				    </p>
+				    <p>
+				    	<em>Avril - Mai 2019</em> <strong>APICulteur</strong> - <em>Perpignan</em>
+				    	<br>Stagiaire Concepteur Développeur
+				    	<ul>
+				        	<li><strong>Conception et développement d’une plateforme web de prises de rendez-vous.</strong></li>
+				        	<li><strong>Architecture CQRS sur framework propriétaire.</strong></li>
+				        	<li><strong>Conception des modules applicatifs.</strong></li>
+				      	</ul>	
+				    </p>			    
+				</section>
+				<section id="formation">
+					<h2>Formation</h2>
+				    <p>
+				    	2018-2019 GRETA Montreuil
+				    	<br/>T.P. Concepteur Développeur Informatique
+				    	<br/>Conception, modélisation et developpement d'application n-tiers
+				    </p>
+				    <p>
+				    	2005-2008 Université Paris XII Créteil
+				    	<br/>Licence LLCE
+				    	<br/>Licence d'anglais littéraire
+				    </p>				
+				</section>
+
+				<aside id="competences">
+					<h2>
+						Compétences personnelles
+					</h2>
+					<ul>
+						<li><strong>Perspective</strong></li>
+						<li><strong>Communication</strong></li>
+						<li><strong>Pédagogie</strong></li>
+						<li><strong>Curiosité</strong></li>
+					</ul>
+					<h2>
+						Compétences techniques
+					</h2>
+					<ul>
+						<li><strong>Python3</strong></li>
+						<li><strong>Java8 - C#</strong></li>
+						<li><strong>HTML - CSS - JS</strong></li>
+						<li><strong>Django/ASP.NET</strong></li>
+						<li><strong>Git</strong></li>
+						<li><strong>TDD (unitTest - Junit)</strong></li>
+					</ul>
+					<h2>
+						Langues
+					</h2>
+					<ul>
+						<li><strong>Anglais 5/5</strong></li>
+						<li><strong>Espagnol 3/5</strong></li>
+					</ul>
+				</aside>				
+				<aside id="hobby">
+					<h3>
+						Centres d'intérêts
+					</h3>
+					<ul>
+						<li><strong>DIY (impression 3D, arduino, raspberry pi, menuiserie)</strong></li>
+						<li><strong>Musique</strong></li>
+						<li><strong>Lecture</strong></li>
+						<li><strong>Sport de glisse (surf, kitesurf, funboard, ski)</strong></li>
+					</ul>
+				</aside>
+				<!-- <aside></aside> -->
+			</article>
+			<!-- <aside></aside> -->
+		</main>
+		<footer>
+	        <section>
+	            <div class="footerdiv">
+	            	<h3>Réseaux sociaux:</h3>
+		            <p>
+		                <a href="https://fr.linkedin.com/in/cedric_montanuy" title="Retrouvez-moi sur LinkedIn" target="_blank" class="li"></a>
+		                <a href="http://fr.viadeo.com/fr/profile/cedric_montanuy" title="Retrouvez-moi sur Viadeo" target="_blank" class="vd"></a>
+		                <a href="https://www.facebook.com/cedric_montanuy" title="Retrouvez-moi sur Facebook" target="_blank" class="fb"></a>
+		            </p>
+	            </div>
+	            <div class="footerdiv">
+	            	<h3>Contact:</h3>
+		            <p>
+		            	Cédric Montanuy
+		            	<br/>Concepteur développeur informatique
+		            	<br><a href="mailto:montanuy.cedric@free.fr">Contactez moi par email !</a>
+		            	<br>06 62 54 27 42
+		            </p>
+	            </div>
+	        <p id="copyright">©Cédric Montanuy</p>
+	        </section>
+		</footer>
+	</body>
+</html>
