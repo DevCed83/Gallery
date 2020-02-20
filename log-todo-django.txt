@@ -1,2 +1,18 @@
-Source : 
-https://www.youtube.com/watch?v=phHM6glUURw
+Source : https://www.youtube.com/watch?v=phHM6glUURw
+Secondary source : https://hackernoon.com/a-guide-to-tdd-a-react-redux-todolist-app-part-1-b8a200bb7091
+http://www.tddbuddy.com/katas/Todo%20List.pdf
+http://codingdojo.org/KataCatalogue/
+
+test : python3 ? pipenv ?
+
+set up virtual environment
+install django
+initiate new project
+initiate new app 
+settings : add new app to installed apps
+			add new url to include app urlpatterns
+add [template, static] folder in app folder
+manage migrate
+
+test : runserver
+
