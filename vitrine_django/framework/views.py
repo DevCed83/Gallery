@@ -2,19 +2,17 @@ from django.shortcuts import render
 
 # Create your views here.
 
-def fw_index(request):
-	context = {'mon_test':  'Salut gros !'}
-	return render(request, 'my_index.html', context)
+def index(request):
+	return render(request, 'framework/index.html')
 
-def fw_presentation(request):
-	context = {'mon_test' : 'Salut gros !'}
-	return render(request, 'my_presentation.html', context)
+def presentation(request):
+	return render(request, 'framework/my_presentation.html')
 
 def news(request):
-	return render(request, 'news.html')
+	return render(request, 'framework/news.html')
 
 def form(request):
-	return render(request, 'form.html')
+	return render(request, 'framework/form.html')
 
 def duplex(request):
-	return render(request, 'duplex.html')
+	return render(request, 'framework/duplex.html')

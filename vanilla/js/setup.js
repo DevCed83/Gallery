@@ -152,14 +152,49 @@ function news_intro(){
     article_presentation.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
 }
 
-// function duplex_intro(){
-//     header_content()
-//     let article_title, article_presentation;
-//     article_title = document.querySelector('article>section>h1');
-//     article_presentation = document.querySelector('article>section>p');
-//     article_title.textContent = "Une connexion vers une API websocket"
-//     article_presentation.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
-// }
+function duplex_intro(){
+    let article_title, article_presentation;
+    article_title = document.querySelector('article>section>h1');
+    article_presentation = document.querySelector('article>section>p');
+    article_title.textContent = "Une connexion vers une API websocket"
+    article_presentation.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+}
+
+function duplex_content(){
+    exchange_connection = {'bitfinex' : {'name' : 'bitfinex', 
+                                         'API' : 'wss://api-pub.bitfinex.com/ws/2',
+                                         'payload' : {"event":"subscribe", "channel":"ticker", "pair":"BTCUSD"}
+                                        },
+                            'kraken' : {'name' : 'bitfinex', 
+                                         'API' : 'wss://ws.kraken.com', 
+                                         'payload' : {"event": "subscribe", "pair": ["XBT/USD","XBT/EUR"],"subscription": {"name": "trade"}} 
+                                        },
+                           }
+    exchange_list = ['bitfinex', 'kraken']
+    let ticker_container = document.querySelector('article>section>ul')
+    for (let i = 0; i<exchange_list.length(); i++){
+        let exchange_display = document.createElement('li')
+        exchange_display.classList.add('btc')
+        exchange_display.classList.add(exchange)
+        ticker_container.appendChild(exchange_display)
+    };
+}
+    
+
+    let ws = new WebSocket("wss://api-pub.bitfinex.com/ws/2");
+    ws.onopen = function(){
+      ws.send(JSON.stringify({"event":"subscribe", "channel":"ticker", "pair":"BTCUSD"}))
+    ws.onmessage = function(msg){
+      var response = JSON.parse(msg.data);
+      console.log("response is :")
+      console.log(response)
+      var hb = response[1];
+      if(hb !== "hb"){
+        document.querySelector('section>ul>li .bitfinex').innerHTML = "$" + response[1][0];
+      }
+};
+
+}
 
 function news(){
     let news_list = document.querySelector('article>section>ul');

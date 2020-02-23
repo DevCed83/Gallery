@@ -5,7 +5,7 @@ function the_header(){
     header_nav = document.createElement('nav');
     my_header.appendChild(header_nav);
     my_main.appendChild(my_header)
-    console.log(my_header)
+    // console.log(my_header)
     return my_header;
 }
 
@@ -159,6 +159,50 @@ function duplex_intro(){
     article_presentation = document.querySelector('article>section>p');
     article_title.textContent = "Une connexion vers une API websocket"
     article_presentation.textContent = "Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat."
+}
+
+function bitfinex_websocket_client(){
+    let ws = new WebSocket("wss://api-pub.bitfinex.com/ws/2");
+    ws.onopen = function(){
+      ws.send(JSON.stringify({"event":"subscribe", "channel":"ticker", "pair":"BTCUSD"}))
+    };
+    ws.onmessage = function(msg){
+      var response = JSON.parse(msg.data);
+      var hb = response[1];
+      if(hb !== "hb"){
+        document.querySelector('article>section>ul>li').innerHTML = "$" + response[1][0];
+      }
+    };
+}
+
+function kraken_websocket_client(){
+    let ws = new WebSocket('wss://ws.kraken.com')
+    subscription = {
+      "event": "subscribe",
+      "pair": ["XBT/EUR"],
+      "subscription": {
+            "name": "ticker"
+      }
+    }
+    ws.onopen = function(){
+        ws.send(JSON.stringify(subscription))
+    }
+    ws.onmessage = function(message){
+        let response = JSON.parse(message.data)
+        console.log(message)
+        let heartbeat = response['event'];
+        if (heartbeat !== 'heartbeat'){
+            document.querySelector('article>section>ul>li').innerHTML = '€' + response[1]['a'][0]
+
+        }
+    }
+}
+
+function duplex_body(){
+    let ticker_list, ticker;
+    ticker_list = document.querySelector('article>section>ul');
+    ticker = document.createElement('li')
+    ticker_list.appendChild(ticker)
 }
 
 function news(){

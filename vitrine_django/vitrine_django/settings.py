@@ -43,7 +43,7 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
-    'presentation.apps.PresentationConfig',
+    'vanilla.apps.VanillaConfig',
     'framework.apps.FrameworkConfig',
     ]
  
@@ -62,8 +62,8 @@ ROOT_URLCONF = 'vitrine_django.urls'
 TEMPLATES = [
     {
         'BACKEND': 'django.template.backends.django.DjangoTemplates',
-        'DIRS': [os.path.join(BASE_DIR, 'framework/templates'),
-                 os.path.join(BASE_DIR, 'presentation/templates'), 
+        'DIRS': [#os.path.join(BASE_DIR, 'framework/templates'),
+                 #os.path.join(BASE_DIR, 'presentation/templates'), 
                 ],
         'APP_DIRS': True,
         'OPTIONS': {

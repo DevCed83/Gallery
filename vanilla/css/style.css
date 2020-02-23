@@ -15,8 +15,8 @@ body {
 header{
     /*margin : inherit;*/
     position : fixed;
-    width: 100%;
     top: 0;
+    width: 100%;
     background: #344658;
     box-shadow: 0 1px 3px rgba(0, 0, 0, .3),
                 0 3px 5px rgba(0, 0, 0, .2),

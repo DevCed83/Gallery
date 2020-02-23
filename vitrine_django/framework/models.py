@@ -11,6 +11,7 @@ class Trade(models.Model):
 	price = models.DecimalField(decimal_places = 3, max_digits = 12)
 	volume = models.DecimalField(decimal_places = 8, max_digits = 12)
 	timestamp = models.IntegerField()
+	amount = models.DecimalField(decimal_places = 3, max_digits = 12)
 
 class Position(models.Model):
 	opening_trade = models.CharField(max_length = 70)
