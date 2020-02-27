@@ -1,0 +1,49 @@
+Un utilisateur veux créer un site web et le mettre en ligne
+
+Il veut afficher des informations sur sa société (une entrerpise de développement informatique, constituée de développeur junior, fraichement titré de leur formation CDA au GRETA de Compiègne ;-) )
+
+La page d'accueil du site présente l'entreprise. 
+
+Une page présentera l'équipe avec des fiches de présentation formatées (patron de conception de page web nécessaire - peut etre en avez vous déjà un ou deux qui traîne, à voir pus tard.)
+
+Une page contiendra des brèves d'information que vous pourrez consulté sur un site tiers. Cette page contiendra aussi un affichage qui donne le cours du bitcoin en temps réel. 
+Trouver une source d'information que vous pouvez exploiter pour chacune de ses requêtes. Noter les techno utilisé pour obtenir ces informations. 
+
+Une page contiendra un formulaire de prise de contact pour les demandes des clients. 
+
+Consignes : 
+Noter toutes vos actions. Toutes. Cela va vous permettre de répondre à la 2e partie dans de bonnes circonstances. 
+Qui utilisera ce site ? 
+Quels sont les éléments nécessaire au bon déroulement de ce projet ? Qui utilisera chacun de ces éléments ces éléments ? 
+Maquetter le site complet. 
+Bonus : Maquetter le site complet pour mobile et ordinateur
+	Déterminer les différentes parties d'une page. (contexte graphique)
+	Déterminer les notions à présenter (contexte/sémantique de page (article, section, formulaire etc etc))
+	Déterminer les catégories de chaque infos (contexte/ sémantique de contenu (titre, paragraphe, saut de ligne etc etc))
+
+Concevoir une organisation logique des pages entres elles (organisation des liens de chaque page)
+
+Page d'accueil : 
+	A partir de la liste des catégories de chaque information, écrire un fichier html présentant ces informations
+
+	A partir de la liste des notions à présenter, établir la liste des éléments HTML à utiliser, et intégrer les informations dans ces notions (vous pouvez tenter de mettre des classes et des id des à présent. Cela reste une V1) 
+
+	A partir de votre maquette graphique, construire le fichier css correspondant. Bonne chance pour celle la ! 
+
+	Détailler le processus de fonctionement du point de vue de l'utilisateur. 
+	Détailler le processus de fonctionnement du point de vue du navigateur
+	Détailler le processus de fonctionnement du point de vue du serveur. 
+
+2e partie : Utiliser le DOM
+
+Pour pouvoir reproduire ce genre de site (utilisation du levier numérique), il vous est demandé de concevoir un logiciel permettant de créer des pages web à volonté tant que l'organisation de la page est donnée, et que les informations à afficher sont connues.
+Le premier sujet d'experience de ce projet est le site web que vous venez de créer pour votre premier client (le patron d'entreprise de développement numérique)
+
+Comme vous avez noté toutes vos étapes de travail précedentes, vous avez à votre disposition un journal de bord qui vous permet de tenir le cap pour arriver à bon port (vous l'avez déjà fais une fois en html/css après tout, rien ne vous empêche de le refaire avec un autre environement)
+Utiliser ce journal pour structurer vos démarches. Essayer de faire apparraitre des niveaux d'informations. Essayer de faire apparraitre des niveaux d'informations en rapport avec votre maquettage (vous pourrez bien sur reprendre votre maquettage client si vous observez des niveaux d'information plus clair ici)
+
+Une fois la correspondance de ces éléments établis, reprendre le maquettage client et y intégrer les termes techniques de votre niveau d'information (ce maquettage ci n'a pas vocations à être vu par votre client. Le client veux savoir où sera le logo de son site, pas que vous utiliser une div que vous avez créer via le DOM pour l'afficher - ce que vous ne ferez pas de toute manière car les div et les span c'est le mal :P)
+
+Commencer à organiser vos éléments répétitifs entre chaque page. On pensera notamment au header et au footer qui se répettent sur toutes les pages. Aussi dans une moindre mesure au main (si vous utiliser les patrons que je vous ai exposé en classe
+)
+

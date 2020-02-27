@@ -1,0 +1,29 @@
+Objectif : afficher sur une page web l'heure du serveur situé à l'URL https://api.kraken.com/0/public/Time
+Mission : 	demander une information 
+			récupérer les informations 
+			traiter les informations pour selectionner celle que l'on veut
+			afficher l'information sur notre page.
+
+demander information :
+	dans un fichier js, création d'un nouvel objet XMLHttpRequest()
+	ma_var = new XMLHttpRequest()
+	appel de méthode open depuis objet XHR avec la method de la requete http et l'url fournit en parametres
+	envoit de la requete avec la méthode send depuis notre objet XHR
+
+récuperer les information :
+	utiliser l'event handler de l'objet XHR onreadystatechange de l'objet XHR : 
+	lui affecter une fonction qui va : 
+						verifier que la requete est arrivée à son terme. (readyState == 4)
+						s'assurer que la ressources à bien été servie. (status == 200)
+						récupère le contenu de la réponse HTTP
+							(attribut responseText de l'objet XHR)
+
+Traiter les informations :
+	convertir la chaine de caractère en JSON. 
+	cibler la valeur de l'attribut result. Cette valeur est un JSON. 
+	Dans cette valeur, cibler l'attribut "rfc1123", et stocké sa valeur dans une variable.
+
+Afficher l'information sur notre page : 
+	créer un objet NodeElement qui représente une balise p
+	affecter la variable qui contient notre information à l'attribut textContent de notre objet NodeElement. 
+	amender l'objet NodeElement au body de la page. 
